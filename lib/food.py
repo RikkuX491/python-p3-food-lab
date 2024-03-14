@@ -1,5 +1,3 @@
-import ipdb
-
 class Food:
 
     # Deliverable 2
