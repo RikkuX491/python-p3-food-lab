@@ -30,8 +30,3 @@ class Food:
     @classmethod
     def most_expensive(cls):
         return max(cls.all, key = lambda f: f.price)
-
-flatburger = Food("Flatburger", 4.35)
-pizza = Food("Pizza", 5.67)
-ice_cream = Food("Ice Cream", 3.34)
-ipdb.set_trace()
