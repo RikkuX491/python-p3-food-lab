@@ -115,4 +115,26 @@ Food.most_expensive()
 # => <__main__.Food object at 0x102961f70>
 ```
 
-Hint: You can use the `max()` function where you can pass in a list as the first argument and an anonymous (`lambda`) function as the second argument to the `max()` function to get the item from the list that is the "max" depending on the criteria specified within the `lambda` function as the value to compare with the other items in the list.
+Hint: You can use the `max()` function to find the food with the highest price. You should pass in two arguments into the `max()` function. The first argument passed into the `max()` function should be a list of foods. For the second argument, create a `key=` argument that will be passed into the `max()` function, where the value of `key` should be an anonymous (`lambda`) function. The `max()` function can then be used to get the item from the list that is the "max" depending on the return value of the `lambda` function. The return value of the `lambda` function is used as the value to compare with the other items in the list to determine which has the highest value. The item containing such a highest value is then returned.
+
+Example:
+
+```py
+people = [
+    {
+        "name": "Alice",
+        "age": 23
+    },
+    {
+        "name": "Bob",
+        "age": 34
+    },
+    {
+        "name": "Sally",
+        "age": 21
+    }
+]
+
+max(people, key = lambda p: p['age'])
+# => {'name': 'Bob', 'age': 34}
+```
