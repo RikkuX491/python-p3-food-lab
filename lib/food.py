@@ -13,9 +13,15 @@ class Food:
     
     @classmethod
     def average_price(cls):
-        price_list = [food.price for food in cls.all]
-        return sum(price_list) / len(price_list)
+        if len(cls.all) == 0:
+            return 0
+        else:
+            price_list = [food.price for food in cls.all]
+            return sum(price_list) / len(price_list)
     
     @classmethod
     def most_expensive(cls):
-        return max(cls.all, key=lambda f:f.price)
+        if len(cls.all) == 0:
+            return None
+        else:
+            return max(cls.all, key=lambda f:f.price)
